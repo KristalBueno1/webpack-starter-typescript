@@ -29,7 +29,7 @@ const usuariosRef = db.collection("usuarios");
 //         })
 
 // destructivo
-    // usuarios_ref.doc("
+    // usuariosref.doc("
     // yFRoW26ja8zUggGYPAGJ
     // ")
     //         .set({
@@ -40,7 +40,7 @@ const usuariosRef = db.collection("usuarios");
     //         })
 
 // delete from usuarios where id= mx...
-// usuarios_ref.doc("3XkldAO0BK044DkgxhK
+// usuariosref.doc("3XkldAO0BK044DkgxhK
 // ")
 // .delete({
 //     nombre: "mariel",
@@ -48,3 +48,16 @@ const usuariosRef = db.collection("usuarios");
 // })
 // .then ( () =>) console.log("borrado")) 
 // .catch ( e =>) console.log("error", e)) 
+
+// select * from usuarios;
+
+const documentos: any[] = [];
+
+snap.forEach(snap_hijo => {
+    documentos.push({
+        id: snap_hijo.id,
+        ...snap_hijo.data()
+    });
+});
+
+    console.log(documentos)})
