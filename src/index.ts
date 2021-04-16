@@ -49,6 +49,22 @@ const usuariosRef = db.collection("usuarios");
 // })
 // .then ( () =>) console.log("borrado")) 
 // .catch ( e =>) console.log("error", e)) 
+
 // select * from usuarios;
+// usuariosRef
+// .get().then(retornaDocumentos);
+
+// where
+
+// usuariosRef
+// .where("activo","==","true").get().then(retornaDocumentos);
+
+// usuariosRef
+// .where("salario",">","1000").get().then(retornaDocumentos);
+
 usuariosRef
+.where("salario",">=","800")
+.where("salario","<=","1000")
 .get().then(retornaDocumentos);
+
+
