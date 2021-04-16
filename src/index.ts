@@ -38,3 +38,13 @@ const usuariosRef = db.collection("usuarios");
     //             fechaNaci: 20,
     //             edad: 10
     //         })
+
+// delete from usuarios where id= mx...
+// usuarios_ref.doc("3XkldAO0BK044DkgxhK
+// ")
+// .delete({
+//     nombre: "mariel",
+//     fechaNaci: 20,
+// })
+// .then ( () =>) console.log("borrado")) 
+// .catch ( e =>) console.log("error", e)) 
