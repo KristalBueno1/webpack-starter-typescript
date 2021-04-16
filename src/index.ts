@@ -1,5 +1,6 @@
 
 import db "./firebase/config";
+import moduleName from ".helpers/mostrar-documentos";
 
 const usuario = {
     nombre: "Kristal",
@@ -48,16 +49,6 @@ const usuariosRef = db.collection("usuarios");
 // })
 // .then ( () =>) console.log("borrado")) 
 // .catch ( e =>) console.log("error", e)) 
-
 // select * from usuarios;
-
-const documentos: any[] = [];
-
-snap.forEach(snap_hijo => {
-    documentos.push({
-        id: snap_hijo.id,
-        ...snap_hijo.data()
-    });
-});
-
-    console.log(documentos)})
+usuariosRef
+.get().then(retornaDocumentos);
